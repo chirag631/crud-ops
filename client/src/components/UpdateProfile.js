@@ -13,7 +13,7 @@ const UpdateProfile = () => {
     let userEmail = localStorage.getItem('userEmail');
     const fetchData = async () => {
         try {
-            const res = await fetch(`/getUsers/${userEmail}`, {
+            const res = await fetch(`/getUsers/me`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
