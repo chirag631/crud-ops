@@ -68,7 +68,7 @@ const UpdateProfile = () => {
             const data = await res.json();
                 console.log(data)
                 if (res.status === 400) {
-                    throw new Error()
+                    throw new Error(data.error)
                 }
                 localStorage.setItem('userEmail', email)
                 
